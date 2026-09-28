@@ -1,0 +1,4 @@
+# Pre-built static site: publish this folder as-is (headers and redirects are in _headers and _redirects).
+[build]
+  publish = "."
+  command = ""

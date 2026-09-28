@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trend · US wildfire record, 1992-2020</title>
+<meta name="description" content="Fires and acres per year, the Class G acreage trend with and without Alaska, and why fire counts are not a trend.">
+<link rel="stylesheet" href="assets/site.css">
+<script>(function(){try{var t=localStorage.getItem('wf-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="index.html">US wildfires <span>1992-2020 · totals to 2025</span></a>
+  <nav class="main" aria-label="Pages"><a href="index.html">Story</a><a href="explore.html">Map</a><a href="trends.html" aria-current="page">Trend</a><a href="causes.html">Seasons and causes</a><a href="places.html">Places</a><a href="conservation.html">Protected lands and losses</a><a href="largest.html">Largest fires</a><a href="drivers.html">Drought</a><a href="model.html">Prediction</a><a href="methods.html">Data and methods</a></nav>
+  <button type="button" class="theme-btn" aria-label="Toggle dark or light mode">Dark mode</button>
+</div></div>
+<main><div class="wrap">
+
+<header class="page-head"><h1>Trend</h1>
+<p class="lede">National burned area has risen since the 1980s, in the bad years and the quiet ones. In the FPA FOD, acres burned by the largest fires rise over 1992-2020. The number of recorded fires does not, and it could not tell you if it did, because the record's coverage changes from year to year.</p></header>
+
+
+<h2 id="national">The national total, 1983-2025</h2>
+<p>The interagency record of all fires on all jurisdictions is the longest consistent national series. Burned area rises by <button type="button" class="q" data-claim="nifc.theil_sen">1.41 million acres a decade</button> (Theil-Sen, 95% interval <button type="button" class="q" data-claim="nifc.theil_sen">0.81</button> to <button type="button" class="q" data-claim="nifc.theil_sen">2.12</button>; Kendall tau <button type="button" class="q" data-claim="nifc.kendall">0.44</button>).
+Three years passed ten million acres: <button type="button" class="q" data-claim="nifc.ten_million_years">2015 (10.13M)</button>, <button type="button" class="q" data-claim="nifc.ten_million_years">2017 (10.03M)</button>, <button type="button" class="q" data-claim="nifc.ten_million_years">2020 (10.12M)</button>. 2025: <button type="button" class="q" data-claim="nifc.annual">5,131,474 acres</button> in <button type="button" class="q" data-claim="nifc.annual">77,850 fires</button>.</p>
+<div id="nifc-acres" class="chart" aria-live="polite"></div>
+<h3>The highs are higher, and so are the lows, with one caveat</h3>
+<div class="table-wrap"><table><thead><tr><th>Million acres a year</th><th class="num">lowest</th><th class="num">25th pct</th><th class="num">median</th><th class="num">75th pct</th><th class="num">highest</th><th class="num">years</th></tr></thead><tbody><tr><td>1983-1999</td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">1.15</button></td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">1.83</button></td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">2.72</button></td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">4.07</button></td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">6.07</button></td><td class="num">17</td></tr><tr><td>2000-2025</td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">2.69</button></td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">4.78</button></td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">7.29</button></td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">8.89</button></td><td class="num"><button type="button" class="q" data-claim="nifc.era_table">10.13</button></td><td class="num">26</td></tr></tbody></table></div>
+<p>The lowest year since 2000 burned <button type="button" class="q" data-claim="nifc.floor_median_ceiling_shift">2.34 times</button> the lowest year before it; the median rose <button type="button" class="q" data-claim="nifc.floor_median_ceiling_shift">2.68 times</button> and the highest <button type="button" class="q" data-claim="nifc.floor_median_ceiling_shift">1.67 times</button>.
+The rise of the floor is not an artefact of two chosen endpoints: the rolling 11-year minimum trends up (Kendall tau <button type="button" class="q" data-claim="nifc.rolling_min_p10_trend">0.51</button>, p = <button type="button" class="q" data-claim="nifc.rolling_min_p10_trend">0.0001</button>).</p>
+<div class="note"><p><strong>Caveat.</strong> The two lowest years in the series are the first two, 1983 and 1984, whose fire counts are also anomalously low (<button type="button" class="q" data-claim="nifc.count_flag_1983_84">18,229</button> and <button type="button" class="q" data-claim="nifc.count_flag_1983_84">20,493</button> fires, against 70,000 to 90,000 in the following years), which suggests incomplete early reporting.
+Starting in 1986 instead, the floor shift is <button type="button" class="q" data-claim="nifc.floor_shift_sensitivity_drop_1983_85">2.02x</button> rather than 2.34x. The lows rose either way.
+The FPA FOD's own annual acres track this series closely (r = <button type="button" class="q" data-claim="nifc.nifc_vs_fpafod_1992_2020">0.993</button> for 1992-2020) and show the same floor rise (<button type="button" class="q" data-claim="nifc.nifc_vs_fpafod_1992_2020">1.75x</button>), but they are largely the same fires, so they are not independent confirmation.
+The fire <em>count</em> in this series is not used as a trend: reporting practice changed over the period.</p></div>
+
+<h2>Fires and acres per year in the FPA FOD, 1992-2020</h2>
+<p>The most fires in one year is <button type="button" class="q" data-claim="year.fires_and_acres_peak">117,943</button> in <button type="button" class="q" data-claim="year.fires_and_acres_peak">2006</button>, a reporting peak rather than a fire peak.
+The most acres is <button type="button" class="q" data-claim="year.fires_and_acres_peak">10.50M</button> in <button type="button" class="q" data-claim="year.fires_and_acres_peak">2020</button>.
+Total acres trend upward (Kendall tau <button type="button" class="q" data-claim="year.acres_trend">0.40</button>, p = <button type="button" class="q" data-claim="year.acres_trend">0.002</button>); fire counts do not (tau <button type="button" class="q" data-claim="year.fires_trend">0.10</button>, p = <button type="button" class="q" data-claim="year.fires_trend">0.47</button>).</p>
+<div class="grid2"><div id="fires-year" class="chart" aria-live="polite"></div><div id="acres-year" class="chart" aria-live="polite"></div></div>
+
+<h2>The largest fires: Class G acres</h2>
+<p>Class G fires (5,000+ acres) are <button type="button" class="q" data-claim="year.fires_share_by_size_class">0.21%</button> of records and <button type="button" class="q" data-claim="year.acres_share_by_size_class">75.1%</button> of all acres, and they are recorded by every reporting system, so their series is the most comparable across years.
+Mean annual Class G acres: <button type="button" class="q" data-claim="class_g.half_period_means">3.53M</button> in 1992-2005 and <button type="button" class="q" data-claim="class_g.half_period_means">5.71M</button> in 2006-2020; without Alaska <button type="button" class="q" data-claim="class_g.half_period_means">2.16M</button> and <button type="button" class="q" data-claim="class_g.half_period_means">4.66M</button>.
+Alaska holds <button type="button" class="q" data-claim="class_g.alaska_share_of_acres">25.9%</button> of Class G acres and has no trend of its own, so the national rise comes from the lower 48, and mostly from the West.</p>
+<div id="classg-acres" class="chart" aria-live="polite"></div>
+<div class="note"><p><strong>What the trend is not.</strong> "Higher highs and higher lows" was the earlier wording. The highs are higher; the lows are not: <button type="button" class="q" data-claim="class_g.five_lowest_years">2010</button> (<button type="button" class="q" data-claim="class_g.five_lowest_years">2.14M</button> acres) is the fifth-lowest of the 29 years.
+The trend is carried by extreme years, which is what a fire regime driven by a few severe seasons looks like. This dataset has no weather, fuels or exposure data, so it cannot say why.</p></div>
+<div id="classg-fires" class="chart" aria-live="polite"></div>
+
+<h2 id="counts">Why the count of fires is not a trend</h2>
+<p>The FPA FOD is a compilation of reporting systems, not a census. State and local records were not available for every state in every year, so the national count of fires per year tracks which systems reported. The national count has no trend
+(tau <button type="button" class="q" data-claim="year.fires_trend">0.10</button>, p = <button type="button" class="q" data-claim="year.fires_trend">0.47</button>, Theil-Sen <button type="button" class="q" data-claim="year.fires_trend">188</button> fires a year with a 95% interval of <button type="button" class="q" data-claim="year.fires_trend">-396</button> to <button type="button" class="q" data-claim="year.fires_trend">755</button>), and single states show the breaks directly:</p>
+<ul class="tight">
+<li><strong>Texas</strong>: <button type="button" class="q" data-def="Texas records with FIRE_YEAR 2004" data-src="docs/review/panel-fire.md section F1 (records by STATE and FIRE_YEAR; counted in the review, not yet a ledger claim)">1,040</button> records in 2004, <button type="button" class="q" data-def="Texas records with FIRE_YEAR 2005" data-src="docs/review/panel-fire.md section F1 (records by STATE and FIRE_YEAR; counted in the review, not yet a ledger claim)">6,901</button> in 2005, <button type="button" class="q" data-def="Texas records with FIRE_YEAR 2006" data-src="docs/review/panel-fire.md section F1 (records by STATE and FIRE_YEAR; counted in the review, not yet a ledger claim)">15,019</button> in 2006. The Texas A&M Forest Service compilation of state and local fires starts in 2005.</li>
+<li><strong>New York</strong>: <button type="button" class="q" data-claim="anom.northeast_fires_by_state_year">129</button> records in 1994, <button type="button" class="q" data-claim="anom.northeast_fires_by_state_year">1,756</button> in 2000, <button type="button" class="q" data-claim="anom.northeast_fires_by_state_year">7,700</button> in 2005, as local fire departments began reporting.</li>
+<li><strong>Northeast as a whole</strong>: the three largest year-over-year count jumps are <button type="button" class="q" data-claim="anom.northeast_largest_yoy_count_jumps">+5,407 in 2020</button>, <button type="button" class="q" data-claim="anom.northeast_largest_yoy_count_jumps">+4,782 in 2005</button>, <button type="button" class="q" data-claim="anom.northeast_largest_yoy_count_jumps">+4,304 in 2015</button>. Rhode Island has zero records in <button type="button" class="q" data-claim="anom.northeast_zero_report_years">13</button> of the 29 years; Connecticut in 2013, 2014.</li>
+</ul>
+<p>Area burned is less affected than counts, because very large fires are reported by several agencies and are captured whichever system a state used. That is why the trend claim on this site is made on Class G acres and not on counts.</p>
+<div id="ne-states" class="chart" aria-live="polite"></div>
+
+<h2 id="coverage">Coverage by state and year</h2>
+<div id="coverage" class="chart" aria-live="polite"></div>
+
+</div></main>
+<footer class="site"><div class="wrap">
+  <p>Data: FPA FOD 6th edition (Short 2022), SHA-256 <code>04f5ab8b</code> (full hash in <a href="https://github.com/Robyn-Collie/wildfire-analysis/tree/main/docs/DATA_VERSION.md">docs/DATA_VERSION.md</a>).
+  Site generated 2026-09-28 by <code>scripts/build_site.py</code> from claims.json, claims_conservation.json, claims_drivers.json, claims_incidents.json, claims_model.json, claims_nifc.json, claims_places.json, claims_wfigs.json.</p>
+  <p>Every number on this page links to its definition and n (click it). Charts: Table view and CSV download under each one. <a href="audit.html">What changed from the first public site</a>.
+  <a href="https://github.com/Robyn-Collie/wildfire-analysis/tree/main/docs">Repository docs</a> · <a href="https://github.com/Robyn-Collie/wildfire-analysis/tree/main/docs/SITE.md">How this site is built</a> · <a href="https://github.com/Robyn-Collie/wildfire-analysis">github.com/Robyn-Collie/wildfire-analysis</a> · Robyn Collie.</p>
+</div></footer>
+<script src="data/meta.js"></script><script src="data/claims.js"></script><script src="data/cells.js"></script><script src="data/coverage.js"></script>
+<script src="vendor/geo_assets.js"></script>
+<script src="vendor/plotly.min.js" charset="utf-8"></script>
+<script src="assets/site.js"></script>
+
+<script>
+(function(){
+  var C = WF.data.claims; if (!C['nifc.annual']) return;
+  var a = C['nifc.annual'].value, ys = WF.years(a), roll = C['nifc.rolling_p10_p50_p90'].value, rys = WF.years(roll);
+  var ts = C['nifc.theil_sen'].value;
+  WF.chart({ el: 'nifc-acres', title: 'Acres burned per year, United States, 1983-2025', claims: ['nifc.annual', 'nifc.rolling_p10_p50_p90', 'nifc.theil_sen', 'nifc.definition'],
+    sub: 'National Interagency Coordination Center totals, all jurisdictions. Dotted lines: the 10th and 90th percentile of the 11 years centred on each year.',
+    rows: ys.map(function (y) { var r = roll[y] || {}; return { year: y, acres: a[y].acres, fires: a[y].fires, rolling_p10_million: r.p10, rolling_p50_million: r.p50, rolling_p90_million: r.p90 }; }),
+    columns: [{ key: 'year' }, { key: 'acres', num: true, fmt: WF.fmt.int }, { key: 'fires', num: true, fmt: WF.fmt.int }, { key: 'rolling_p10_million', label: 'rolling p10 (M acres)', num: true }, { key: 'rolling_p50_million', label: 'rolling median (M)', num: true }, { key: 'rolling_p90_million', label: 'rolling p90 (M)', num: true }],
+    height: 340,
+    build: function (t) { return { data: [
+      // Percentile lines, not a filled band: Plotly draws scatter fills above bars whatever the trace order, so a band hides them.
+      { type: 'scatter', mode: 'lines', x: rys, y: rys.map(function (y) { return roll[y].p90 * 1e6; }), line: { color: t.series[0], dash: 'dot', width: 2 }, name: '11-year p10 and p90', legendgroup: 'band', hovertemplate: '%{x}: 11-year p90 %{y:.3s} acres<extra></extra>' },
+      { type: 'scatter', mode: 'lines', x: rys, y: rys.map(function (y) { return roll[y].p10 * 1e6; }), line: { color: t.series[0], dash: 'dot', width: 2 }, name: '11-year p10', legendgroup: 'band', showlegend: false, hovertemplate: '%{x}: 11-year p10 %{y:.3s} acres<extra></extra>' },
+      { type: 'bar', x: ys, y: ys.map(function (y) { return a[y].acres; }), marker: { color: t.series[1] }, name: 'acres', hovertemplate: '%{x}: %{y:,} acres<extra></extra>' },
+      { type: 'scatter', mode: 'lines', x: ys, y: ys.map(function (y) { return (ts.intercept + ts.slope_per_decade / 10 * y) * 1e6; }), line: { color: t.ink2, dash: 'dash', width: 1.5 }, name: 'Theil-Sen', hoverinfo: 'skip' }],
+      layout: { yaxis: { title: { text: 'acres' }, tickformat: '.2s', rangemode: 'tozero' }, legend: { y: -0.2 }, barmode: 'overlay' } }; }
+  });
+})();
+
+(function(){
+  var C = WF.data.claims;
+  var ya = C['year.fires_and_acres'].value, years = WF.years(ya);
+  var fpk = C['year.fires_and_acres_peak'].value;
+  WF.chart({ el: 'fires-year', title: 'Fires recorded per year', claims: ['year.fires_and_acres', 'year.fires_trend'],
+    sub: 'Count of records by FIRE_YEAR. The count depends on which reporting systems were included in each year.',
+    rows: years.map(function (y) { return { year: y, fires: ya[y].fires }; }),
+    columns: [{ key: 'year', label: 'year' }, { key: 'fires', label: 'fires', num: true, fmt: WF.fmt.int }],
+    staticImg: 'figures/fires_and_acres_by_year.png', height: 280,
+    build: function (t) { return {
+      data: [{ type: 'bar', x: years, y: years.map(function (y) { return ya[y].fires; }), marker: { color: t.series[0] }, name: 'fires',
+        hovertemplate: '%{x}<br>%{y:,} fires<extra></extra>' }],
+      layout: { showlegend: false, yaxis: { title: { text: 'fires' }, rangemode: 'tozero', tickformat: ',' },
+        annotations: [{ x: fpk.fires_peak_year, y: fpk.fires_peak, text: fpk.fires_peak_year + ': ' + WF.fmt.int(fpk.fires_peak) + ' (a reporting peak)', showarrow: true, arrowhead: 0, ax: -40, ay: -28, font: { color: t.ink2, size: 11 }, arrowcolor: t.axis }] } }; }
+  });
+  WF.chart({ el: 'acres-year', title: 'Acres burned per year', claims: ['year.fires_and_acres', 'year.acres_trend'],
+    sub: 'Sum of FIRE_SIZE by FIRE_YEAR, all size classes.',
+    rows: years.map(function (y) { return { year: y, acres: Math.round(ya[y].acres) }; }),
+    columns: [{ key: 'year', label: 'year' }, { key: 'acres', label: 'acres', num: true, fmt: WF.fmt.int }],
+    staticImg: 'figures/fires_and_acres_by_year.png', height: 280,
+    build: function (t) { return {
+      data: [{ type: 'bar', x: years, y: years.map(function (y) { return ya[y].acres; }), marker: { color: t.series[0] }, name: 'acres',
+        hovertemplate: '%{x}<br>%{y:,.0f} acres<extra></extra>' }],
+      layout: { showlegend: false, yaxis: { title: { text: 'acres' }, rangemode: 'tozero', tickformat: '.2s' },
+        annotations: [{ x: fpk.acres_peak_year, y: fpk.acres_peak, text: fpk.acres_peak_year + ': ' + WF.fmt.compact(fpk.acres_peak) + ' acres', showarrow: true, arrowhead: 0, ax: -60, ay: -20, font: { color: t.ink2, size: 11 }, arrowcolor: t.axis }] } }; }
+  });
+
+  var ga = C['class_g.acres_by_year'].value, gx = C['class_g.acres_by_year_excl_alaska'].value, gk = C['class_g.acres_by_year_alaska'].value;
+  var tA = C['class_g.acres_trend'].value, tX = C['class_g.acres_trend_excl_alaska'].value;
+  var gy = WF.years(ga);
+  function ts(tr, y) { return tr.theil_sen_intercept + tr.theil_sen_slope * y; }
+  WF.chart({ el: 'classg-acres', title: 'Class G acres per year, with and without Alaska', claims: ['class_g.acres_by_year', 'class_g.acres_by_year_excl_alaska', 'class_g.acres_by_year_alaska', 'class_g.acres_trend', 'class_g.acres_trend_excl_alaska', 'class_g.acres_trend_alaska'],
+    sub: 'Fires of 5,000 acres and more (FIRE_SIZE_CLASS G). Dashed lines are Theil-Sen fits over the 29 annual points.',
+    rows: gy.map(function (y) { return { year: y, acres_all: Math.round(ga[y]), acres_excl_alaska: Math.round(gx[y]), acres_alaska: Math.round(gk[y]), theil_sen_all: Math.round(ts(tA, y)), theil_sen_excl_alaska: Math.round(ts(tX, y)) }; }),
+    columns: [{ key: 'year', label: 'year' }, { key: 'acres_all', label: 'acres, all states', num: true, fmt: WF.fmt.int }, { key: 'acres_excl_alaska', label: 'acres, excluding Alaska', num: true, fmt: WF.fmt.int }, { key: 'acres_alaska', label: 'acres, Alaska', num: true, fmt: WF.fmt.int }, { key: 'theil_sen_all', label: 'Theil-Sen fit, all', num: true, fmt: WF.fmt.int }, { key: 'theil_sen_excl_alaska', label: 'Theil-Sen fit, excl. Alaska', num: true, fmt: WF.fmt.int }],
+    staticImg: 'figures/class_g_acres_trend.png', height: 360,
+    caption: 'All states: Kendall tau ' + tA.kendall_tau.toFixed(2) + ' (p = ' + tA.kendall_p.toFixed(4) + '), Theil-Sen slope ' + WF.fmt.int(tA.theil_sen_slope) + ' acres a year (95% interval ' + WF.fmt.int(tA.theil_sen_slope_ci95[0]) + ' to ' + WF.fmt.int(tA.theil_sen_slope_ci95[1]) + '). ' +
+      'Excluding Alaska: tau ' + tX.kendall_tau.toFixed(2) + ' (p = ' + tX.kendall_p.toFixed(4) + '), slope ' + WF.fmt.int(tX.theil_sen_slope) + ' acres a year (' + WF.fmt.int(tX.theil_sen_slope_ci95[0]) + ' to ' + WF.fmt.int(tX.theil_sen_slope_ci95[1]) + '). ' +
+      'Alaska alone: tau ' + C['class_g.acres_trend_alaska'].value.kendall_tau.toFixed(2) + ' (p = ' + C['class_g.acres_trend_alaska'].value.kendall_p.toFixed(2) + '), no trend. Plain Kendall p-values, no serial-correlation adjustment; n is the number of Class G fires behind the series.',
+    build: function (t) {
+      var L = function (obj, name, color) { return { type: 'scatter', mode: 'lines+markers', name: name, x: gy, y: gy.map(function (y) { return obj[y]; }), line: { color: color, width: 2 }, marker: { size: 7, color: color, line: { color: t.surface, width: 2 } }, hovertemplate: '%{x}<br>%{y:,.0f} acres<extra>' + name + '</extra>' }; };
+      var F = function (tr, name, color) { return { type: 'scatter', mode: 'lines', name: name, x: gy, y: gy.map(function (y) { return ts(tr, y); }), line: { color: color, width: 1.5, dash: 'dash' }, hoverinfo: 'skip', showlegend: true }; };
+      return { data: [L(ga, 'All states', t.series[0]), L(gx, 'Excluding Alaska', t.series[1]), L(gk, 'Alaska', t.series[2]), F(tA, 'Theil-Sen, all', t.series[0]), F(tX, 'Theil-Sen, excl. Alaska', t.series[1])],
+        layout: { yaxis: { title: { text: 'acres' }, rangemode: 'tozero', tickformat: '.2s' }, legend: { y: -0.22 }, hovermode: 'x unified' } };
+    }
+  });
+
+  var gf = C['class_g.fires_by_year'].value, tF = C['class_g.fires_trend'].value;
+  WF.chart({ el: 'classg-fires', title: 'Class G fires per year', claims: ['class_g.fires_by_year', 'class_g.fires_trend'],
+    sub: 'Count of fires of 5,000+ acres. These are recorded by every reporting system, so the count is comparable across years.',
+    rows: gy.map(function (y) { return { year: y, class_g_fires: gf[y] }; }),
+    columns: [{ key: 'year', label: 'year' }, { key: 'class_g_fires', label: 'Class G fires', num: true, fmt: WF.fmt.int }], height: 260,
+    caption: 'Kendall tau ' + tF.kendall_tau.toFixed(2) + ' (p = ' + tF.kendall_p.toFixed(3) + '), Theil-Sen slope ' + tF.theil_sen_slope.toFixed(1) + ' fires a year (95% interval ' + tF.theil_sen_slope_ci95[0].toFixed(1) + ' to ' + tF.theil_sen_slope_ci95[1].toFixed(1) + ').',
+    build: function (t) { return { data: [{ type: 'bar', x: gy, y: gy.map(function (y) { return gf[y]; }), marker: { color: t.series[0] }, hovertemplate: '%{x}<br>%{y} Class G fires<extra></extra>' },
+      { type: 'scatter', mode: 'lines', x: gy, y: gy.map(function (y) { return ts(tF, y); }), line: { color: t.series[0], dash: 'dash', width: 1.5 }, hoverinfo: 'skip', name: 'Theil-Sen' }],
+      layout: { showlegend: false, yaxis: { title: { text: 'fires' }, rangemode: 'tozero' } } }; }
+  });
+
+  var ne = C['anom.northeast_fires_by_state_year'].value, neStates = Object.keys(ne).sort(), neYears = WF.years(ne[neStates[0]]);
+  WF.chart({ el: 'ne-states', title: 'Northeast fire counts by state and year: a reporting series', claims: ['anom.northeast_fires_by_state_year', 'anom.northeast_zero_report_years', 'anom.northeast_largest_yoy_count_jumps'],
+    sub: 'New York highlighted; the other eight Northeast states in gray. Zero-record years are reporting gaps, not fire-free years.',
+    rows: neYears.map(function (y) { var r = { year: y }; neStates.forEach(function (s) { r[s] = ne[s][y]; }); return r; }),
+    columns: [{ key: 'year', label: 'year' }].concat(neStates.map(function (s) { return { key: s, label: s, num: true, fmt: WF.fmt.int }; })), height: 300,
+    build: function (t) {
+      var data = neStates.filter(function (s) { return s !== 'NY'; }).map(function (s) { return { type: 'scatter', mode: 'lines', name: s, x: neYears, y: neYears.map(function (y) { return ne[s][y]; }), line: { color: t.gray, width: 1.5 }, hovertemplate: '%{x} ' + s + ': %{y:,}<extra></extra>', showlegend: false }; });
+      data.push({ type: 'scatter', mode: 'lines+markers', name: 'NY', x: neYears, y: neYears.map(function (y) { return ne['NY'][y]; }), line: { color: t.series[0], width: 2 }, marker: { size: 6, color: t.series[0], line: { color: t.surface, width: 2 } }, hovertemplate: '%{x} NY: %{y:,}<extra></extra>' });
+      return { data: data, layout: { showlegend: false, yaxis: { title: { text: 'fires' }, rangemode: 'tozero', tickformat: ',' },
+        annotations: [{ x: 2005, y: ne['NY']['2005'], text: 'NY 2005: ' + WF.fmt.int(ne['NY']['2005']), showarrow: true, arrowhead: 0, ax: -50, ay: -25, font: { size: 11, color: t.ink2 }, arrowcolor: t.axis }, { x: 1994, y: ne['NY']['1994'], text: 'NY 1994: ' + ne['NY']['1994'], showarrow: true, arrowhead: 0, ax: 30, ay: -30, font: { size: 11, color: t.ink2 }, arrowcolor: t.axis }] } };
+    }
+  });
+
+  var cov = WF.data.coverage;
+  if (cov) {
+    var st = Object.keys(cov.by_state_year).sort(), cy = WF.years(cov.by_state_year[st[0]]);
+    var inWin = function (s, y) { var w = cov.windows && cov.windows[s]; return w ? (y >= w[0] && y <= w[1]) : null; };
+    var z = st.map(function (s) { return cy.map(function (y) { var v = cov.by_state_year[s][y]; return (v === undefined || v === null || v === 0) ? null : Math.log10(v); }); });
+    var rows = []; st.forEach(function (s) { cy.forEach(function (y) { var br = cov.breaks && cov.breaks[s] && cov.breaks[s][y]; rows.push({ state: s, year: y, records: cov.by_state_year[s][y] || 0, inside_usable_window: inWin(s, y) === null ? '' : (inWin(s, y) ? 'yes' : 'no'), break_year: br ? 'yes' : '', ratio_to_prior_nonzero_year: br || '' }); }); });
+    var bx = [], by = [], bt = []; st.forEach(function (s) { var b = cov.breaks && cov.breaks[s]; if (b) Object.keys(b).forEach(function (y) { bx.push(Number(y)); by.push(s); bt.push(s + ' ' + y + ': break, ' + b[y] + 'x the prior non-zero year'); }); });
+    WF.chart({ el: 'coverage', title: 'Records by state and year: reporting coverage', definition: cov.definition, source: cov.source, n: cov.n, csvName: 'coverage_state_year',
+      sub: 'Color is log10 of the record count; blank cells have zero records. Crosses mark break years (count more than 3x or less than a third of the prior non-zero year). Rows are grouped by region.',
+      rows: rows, columns: [{ key: 'state' }, { key: 'year' }, { key: 'records', num: true, fmt: WF.fmt.int }, { key: 'inside_usable_window', label: 'inside usable window' }, { key: 'break_year', label: 'break year' }, { key: 'ratio_to_prior_nonzero_year', label: 'ratio to prior non-zero year', num: true }],
+      staticImg: 'figures/coverage_state_year.png', height: Math.max(560, 15 * st.length + 80),
+      build: function (t) {
+        var order = st.slice().sort(function (a, b) { var ra = (cov.regions && cov.regions[a]) || '', rb = (cov.regions && cov.regions[b]) || ''; return ra === rb ? (a < b ? -1 : 1) : (ra < rb ? -1 : 1); });
+        var zz = order.map(function (s) { return z[st.indexOf(s)]; });
+        var cd = order.map(function (s) { return cy.map(function (y) { var w = inWin(s, y); return [cov.by_state_year[s][y] || 0, w === null ? '' : (w ? 'inside usable window' : 'outside usable window')]; }); });
+        var ylab = order.map(function (s) { return s + ((cov.regions && cov.regions[s]) ? ' · ' + cov.regions[s] : ''); });
+        return { data: [{ type: 'heatmap', z: zz, x: cy, y: ylab, colorscale: WF.seqScale(t), xgap: 1, ygap: 1, hoverongaps: false, customdata: cd,
+          hovertemplate: '%{y} %{x}: %{customdata[0]:,} records<br>%{customdata[1]}<extra></extra>', colorbar: { title: { text: 'records (log10)' }, thickness: 10, tickvals: [1, 2, 3, 4], ticktext: ['10', '100', '1,000', '10,000'], tickfont: { color: t.muted } } },
+          { type: 'scatter', mode: 'markers', x: bx, y: by.map(function (s) { return ylab[order.indexOf(s)]; }), text: bt, hovertemplate: '%{text}<extra></extra>', marker: { symbol: 'x-thin', size: 7, color: t.ink, line: { width: 1.5, color: t.ink } }, name: 'break year', showlegend: false }],
+          layout: { margin: { l: 10, t: 6 }, yaxis: { autorange: 'reversed', tickfont: { size: 9 }, automargin: true }, xaxis: { side: 'top', dtick: 2 } } };
+      }
+    });
+  }
+})();
+</script>
+</body>
+</html>
